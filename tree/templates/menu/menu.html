@@ -1,0 +1,24 @@
+{% load menu_extras %}
+
+{% for item in items %}
+{% if item.parent is None %}
+<label>
+  <h2> {{ item.category.name }} </h2>
+</label>
+{% endif %}
+
+<ul>
+  <li>
+    {% if item is not None %}
+    <details {% if item.slug in open_items %} open {% endif %}>
+      <summary>
+        <a href={{ item.url }}> {{ item.name }}</a>
+      </summary>
+      <div>
+        {% draw_children item.slug parent_tree open_items%}
+      </div>
+    </details>
+    {% endif %}
+  </li>
+</ul>
+{% endfor %}

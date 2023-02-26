@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load menu_extras %}
+
+{% block title %} Three menu {% endblock %}
+
+{% block content %}
+<div>
+  {% draw_menu 'main_menu' %}
+  {% draw_menu 'minor_menu' %}
+</div>
+{% endblock %}
