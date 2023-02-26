@@ -7,11 +7,11 @@
    
  - При рендере одного меню - один запрос к БД. Скрин с двумя меню на странице:
 	![Image
-   alt](https://github.com/BystrovN/images/raw/main/uptrader_test/4_sql.png)
+   alt](https://github.com/BystrovN/images/raw/main/uptrader_test/4_sql.jpeg)
    
  - Для уменьшения запросов к БД queryset со всеми пунктами меню кешируется по умолчанию на 5 секунд. Время жизни можно изменить в settings.py. Скрин с двумя меню в кеше:
 	![Image
-   alt](https://github.com/BystrovN/images/raw/main/uptrader_test/2_sql.png)
+   alt](https://github.com/BystrovN/images/raw/main/uptrader_test/2_sql.jpeg)
    
  - Для ознакомления с работой подготовлены тестовые данные. Для загрузка их в базу из каталога *tree/* необходимо выполнить команду:
   ``` python manage.py loaddata dump.json ```
